@@ -1,0 +1,39 @@
+{
+  "name": "fleet-route-management",
+  "version": "1.0.0",
+  "description": "Fleet Route Management System - A logistics platform for route recording and fleet tracking",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:backend": "npm run dev --workspace=apps/backend",
+    "dev:admin": "npm run dev --workspace=apps/admin-web",
+    "build:backend": "npm run build --workspace=apps/backend",
+    "build:admin": "npm run build --workspace=apps/admin-web",
+    "start:backend": "npm run start --workspace=apps/backend",
+    "lint": "npm run lint --workspaces",
+    "test": "npm run test --workspaces",
+    "clean": "rm -rf node_modules apps/*/node_modules packages/*/node_modules",
+    "install:mobile": "cd apps/pathfinder-mobile && npm install && cd ../follower-mobile && npm install"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": [
+    "logistics",
+    "fleet-management",
+    "route-tracking",
+    "gps",
+    "react-native",
+    "nodejs"
+  ],
+  "author": "Fleet Route Management Team",
+  "license": "MIT"
+}
